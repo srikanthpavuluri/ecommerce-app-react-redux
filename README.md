@@ -1,11 +1,13 @@
-# E-Commerce App with React-Redux
+# E-Commerce App - React-Redux
 
-This project simulates an e-commerce web site. This a study for listing items, pagination, filter them by brands or sort them by price. Also handles chart operations using localstorage.
+This project simulates an e-commerce web site.
 
 
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `npm install`
 
 ### `npm start`
 

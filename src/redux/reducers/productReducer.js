@@ -1,8 +1,8 @@
 
 import {
-  PRODUCT_FETCH_START,
-  PRODUCT_FETCH_SUCCESS,
-  PRODUCT_FETCH_FAIL,
+  PRODUCTS_FETCH_START,
+  PRODUCTS_FETCH_SUCCESS,
+  PRODUCTS_FETCH_FAIL,
 } from "../actions/actionTypes";
 
 const initialState = {
@@ -14,19 +14,19 @@ const initialState = {
 
 export const productsReducer = (state = initialState, action) => {
   switch (action.type) {
-    case PRODUCT_FETCH_START:
+    case PRODUCTS_FETCH_START:
       return {
         ...state,
         start: true,
       };
-    case PRODUCT_FETCH_SUCCESS:
+    case PRODUCTS_FETCH_SUCCESS:
       return {
         ...state,
         start: false,
         success: true,
         phones: action.payload,
       };
-    case PRODUCT_FETCH_FAIL:
+    case PRODUCTS_FETCH_FAIL:
       return {
         ...state,
         start: false,

@@ -1,15 +1,15 @@
 import {
-  PRODUCT_FETCH_START,
-  PRODUCT_FETCH_SUCCESS,
-  PRODUCT_FETCH_FAIL,
+  PRODUCTS_FETCH_START,
+  PRODUCTS_FETCH_SUCCESS,
+  PRODUCTS_FETCH_FAIL,
 } from "../actions/actionTypes";
 import { productURL } from "../urls";
 import axios from "axios";
 
 export const getProducts = (dispatch) => {
-  dispatch({ type: PRODUCT_FETCH_START });
+  dispatch({ type: PRODUCTS_FETCH_START });
   axios
     .get(productURL)
-    .then((res) => dispatch({ type: PRODUCT_FETCH_SUCCESS, payload: res.data }))
-    .catch((err) => dispatch({ type: PRODUCT_FETCH_FAIL, payload: err }));
+    .then((res) => dispatch({ type: PRODUCTS_FETCH_SUCCESS, payload: res.data }))
+    .catch((err) => dispatch({ type: PRODUCTS_FETCH_FAIL, payload: err }));
 };
